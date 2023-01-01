@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Select elements by ID-->
+    <div id="isc">
+        <p> Isc club </p>
+    </div>
+    <script>
+        var x = document.getElementById("isc");
+        console.log(x);
+    </script>
+    <!----------->
+
+
+
+    <!-- Select multiple elements by class-->
+    <div class="isc">
+        <p> 1 </p>
+    </div>
+    <div class="isc">
+        <p> 2 </p>
+    </div>
+    <div class="isc">
+        <p> 3 </p>
+    </div>
+ 
+    <script>
+
+console.log(document.getElementsByClassName("isc"));
+        
+
+    </script>
+    <!----------->
+
+
+
+     <!-- Select elements using By Tag-->
+     <div>
+        <h2>Item 1</h2>
+        <h2>Item 2</h2>
+        <h2>Item 3</h2>
+     </div>
+      <script>
+        var h = document.getElementsByTagName("h2");
+console.log(h);
+      </script>
+      <!---->
+
+
+
+ <!-- Select elements using query Selector-->
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+
+      <div class="ex">By class</div>
+      <div id="ex">By Id</div>
+      <script>
+      
+       var element= document.querySelectorAll('li');
+        console.log(element);
+
+        console.log(document.querySelector('.ex'));
+        console.log( document.querySelector('#ex'));
+      
+      </script>
+      <!----------->
+
+ <!-- Get existing page content-->
+      <div id="baha"><p> hehe </p></div>
+      <script>
+         console.log(document.getElementById("baha").textContent);
+         console.log(document.getElementById("baha").innerText);
+         console.log(document.getElementById("baha").innerHTML);
+
+      </script>
+      <!----------->
+       <!-- Update existing page content-->
+       
+       <script>
+          // document.getElementById("baha").textContent="<h1>hello</h1>";
+           
+          
+         // document.getElementById("baha").innerText="<h1>hello</h1>";
+         
+         
+          // document.getElementById("baha").innerHTML="<h1>hello</h1>";
+          
+
+ 
+       </script>
+       <!----------->
+
+        <!-- Create and add new content-->
+        <script>
+
+            // Create a new element
+            const NWElem=document.createElement("p");
+
+            // Adding an  element
+
+            document.getElementById("baha").appendChild(NWElem); 
+
+            // Create a new text
+
+            const NWText=document.createTextNode("Hello");
+
+
+
+        </script>
+
+        <!---------------->
+        <!-- Create and add new content-->
+
+        <div id="Abdelheq">Abdelheq<div>
+            <script>
+                document.getElementById("Abdelheq").insertAdjacentHTML("afterbegin","douma")
+                document.getElementById("Abdelheq").insertAdjacentHTML("afterend","<p>douma</p>")
+                document.getElementById("Abdelheq").insertAdjacentHTML("beforebegin","douma")
+                document.getElementById("Abdelheq").insertAdjacentHTML("beforeend","douma")
+
+            </script>
+
+            <!------------------->
+            <!--Removing a child element-->
+            <div id="aha">
+                    <p> hehe </p>
+               <p> haha </p>
+                <p> hihi </p>
+                </div>
+                <script>
+                    const parentElem=document.getElementById("baha");
+                    parentElem.removeChild(parentElem.children[1]);
+
+                </script>
+                <!------------------->
+            <!--Removing an element directly-->
+            <script>
+                 document.getElementById("aha").remove();
+            </script>
+            <!----------------------->
+
+            <!-- Create and add new content-->
+
+        <div id="chil">Child 2<div>
+            <script>
+                document.getElementById("chil").style.color="red"; 
+
+                document.getElementById("chil").style.cssText="font-weight:bolder;";
+                document.getElementById("chil").setAttribute("style","color:blue;");
+  
+                document.getElementById("chil").className="doum";
+                //document.getElementById("baha").classList.add("ClassName");
+                //document.getElementById("baha").classList.remove("ClassName");
+
+                //document.getElementById("baha").classList.add("ClassName");
+                //document.getElementById("baha").classList.add("ClassName");
+
+
+            </script>
+
+            <!------------------->
+           
+
+                
+
+
+      
+      
+
+</body>
+
+</html>
